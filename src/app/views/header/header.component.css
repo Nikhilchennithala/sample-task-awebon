@@ -1,0 +1,58 @@
+#container{
+    width:100%;
+    background-color: rgb(37, 36, 36);
+    height: 64px;
+    position: relative;
+}
+#left{
+    float:left;
+    width:200px;
+    color: white;
+    text-align: center;
+    position: relative;
+    top: 25%;
+}
+#right{
+    float:right;
+    width:150px;
+    color: white;
+    position: relative;
+    top: 11%;
+}
+#center{
+    margin:0 auto;
+    width:100px;
+    color: white;
+    width: 500px;
+    position: relative;
+    top: 25%;
+}
+form {
+    color: #555;
+    display: flex;
+    border-radius: 5px;
+  }
+  
+input[type="search"] {
+    border: none;
+    background: rgb(156, 144, 144);
+    margin: 0;
+    font-size: 14px;
+    color: white;
+    border-radius: 18px;
+    width: 500px;
+    padding-left: 10px;
+  }
+  button {
+    position: absolute;
+    right: 0;
+    text-decoration: none;
+    background: none;
+    border: none;
+    padding-top: 5px;
+    color: white;
+}
+img {
+    padding: 5px;
+    border-radius: 15px;
+}

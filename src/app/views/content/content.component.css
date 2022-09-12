@@ -1,0 +1,48 @@
+.container-fluid {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+.main {
+    background-color: black;
+}
+.left {
+    background-color: green;
+}
+.right {
+    background-color: black;
+}
+mat-card {
+    width: 280px;
+    height: 400px;
+    margin: 15px;
+    padding: 0px!important;
+    border-radius: 24px!important;
+    background-color: rgb(28, 27, 27);
+    color: white;
+}
+img {
+    width: 100%;
+    height: 188px;
+    border-radius: 24px 24px 0px 0px;
+}
+.desc {
+    padding: 10px;
+    text-align: start;
+}
+.content {
+    position: absolute;
+    bottom: 0px;
+    height: 60px;
+    width: 100%;
+    border-radius: 0px 0px 24px 24px;
+    border-top: 1px solid white;
+    padding: 15px;
+}
+.rating {
+    font-size: 14px!important;
+    color: rgb(43, 228, 228);
+    float: left;
+}
+.price {
+    float: right;
+}

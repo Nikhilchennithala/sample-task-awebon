@@ -1,0 +1,35 @@
+<div class="container-fluid">
+  <div class="main">
+    <div class="row">
+        <div class="col-3 left">
+            <div>
+              <h2>Jane Flex</h2>
+              <p>Some text.</p>
+            </div>
+        </div>
+        <div class="col-9 right">
+            <div class="w-100">
+              <div class="row">
+                <div class="col-4" *ngFor="let item of products">
+                  <mat-card class="item" (click)="openProduct(item)">
+                    <div>
+                      <img src="{{item.thumbnail}}" alt="">
+                    </div>
+                    <div class="desc">
+                      <span>{{item.description}}</span>
+                    </div>
+                    <div class="content">
+                        <span class="rating">
+                          <span><mat-icon style="font-size: 14px; width: 12px;">star_rate</mat-icon> {{item.rating}} (100)</span>
+                        </span>
+                        <span class="price"><s><mat-icon style="font-size: 16px; width: 12px;"> attach_money</mat-icon>{{item.price}}</s> &nbsp;<mat-icon style="font-size: 14px; width: 12px;">attach_money</mat-icon> <span style="font-size: 18px;">{{item.price}}</span>
+                        </span>
+                    </div>
+                  </mat-card>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>

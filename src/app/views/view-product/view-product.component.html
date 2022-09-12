@@ -1,0 +1,21 @@
+<app-header></app-header>
+<div class="main">
+    <div class="body">
+        <div class="image"></div>
+        <div class="specs">
+            <div><span>{{productDetails.title}}</span></div>
+        </div>
+        <div class="specs">
+            <div><span>{{productDetails.description}}</span></div>
+        </div>
+        <div class="specs">
+            <div><span>{{productDetails.rating}} Ratings</span></div>
+        </div>
+        <div class="specs">
+            <div>
+                <span [hidden]="productDetails.stock<0">Available in Stock</span>
+                <span [hidden]="productDetails.stock<0">Out of Stock</span>
+            </div>
+        </div>
+    </div>
+</div>
