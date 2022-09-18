@@ -13,6 +13,7 @@ import { MaterialModule } from './material/material/material.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ContentComponent } from './views/content/content.component';
 import { ViewProductComponent } from './views/view-product/view-product.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ViewProductComponent } from './views/view-product/view-product.componen
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

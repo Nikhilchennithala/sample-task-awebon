@@ -48,11 +48,83 @@ img {
 }
 .specs {
     color: white;
-    height: 500px;
-    width: 220px;
-    border-radius: 24px;
+    height: 700px;
+    width: 280px;
+    border-radius: 10px;
     background-color: rgb(23, 21, 21);
     position: relative;
-    left: 30px;
-    top: 30px;
+    left: 40px;
+    top: 40px;
+    padding: 20px;
+}
+.head {
+    display: flex;
+}
+.clear {
+    margin-left: auto;
+    font-size: 12px;
+}
+.contents {
+    margin-top: 25px;
+}
+.category-input input{
+    background: #555;
+    border: none;
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+}
+mat-slider {
+    width: 100%;
+}
+ul {
+    column-count: 2;
+    margin-left: -40px;
+}
+::ng-deep .mat-checkbox-frame {
+    border-color: white;
+    font-size: 12px;
+}
+.material-icons {
+    font-size: 14px !important;
+}
+
+.example-section {
+    margin: 12px 0;
+} 
+.example-margin {
+    margin: 0 12px;
+} 
+ul {
+    list-style-type: none;
+    margin-top: 4px;
+}
+.example-radio-group {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+    align-items: flex-start;
+}
+.example-radio-button {
+    margin: 5px;
+}
+.sideMenu {
+    display: none;
+}
+
+@media (min-width: 360px) and (max-width: 540px) {
+    mat-card {
+        width: 230px;
+        height: 360px;
+    }
+    .sideMenu {
+        color: white;
+        position: relative;
+        left: 40px;
+        top: 30px;
+        display: inline;
+    }
+    .specs {
+        z-index: 1;
+    }
 }

@@ -17,13 +17,14 @@ export class ViewProductComponent implements OnInit {
                   (data) => {
                     console.log(data)
                     this.id = Number(data['params'].id);
+                    this.getProductDetails(this.id);
                   }
                 );
                 console.log(this.id)
               }
 
   ngOnInit() {
-    this.getProductDetails(this.id);
+    
   }
   getProductDetails(id) {
     this.productService.getAllProducts().subscribe(

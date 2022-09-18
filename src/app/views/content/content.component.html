@@ -2,14 +2,86 @@
   <div class="main">
     <div class="row">
         <div class="col-3 left">
-            <div>
-              <div class="specs"></div>
+          <div class="sideMenu"><span><i class="material-icons" (click)="menu()">menu</i></span></div>
+            <div [hidden]="isMenu">
+              <div class="specs">
+                <div class="head">
+                  <div class="filter"><span>Filter Results</span></div>
+                  <div class="clear"><span>Clear all</span></div>
+                </div>
+                <div class="category">
+                  <div class="category-title">Category</div>
+                  <div class="category-input">
+                    <input type="text" (keyup)="refres($event.target.value)">
+                  </div>
+                </div>
+                <div class="price-left">
+                  <div>Price</div>
+                  <div>
+                    <mat-slider
+                      thumbLabel 
+                      [displayWith]="formatLabel"
+                      tickInterval="1000"
+                      step="10"
+                      min="0"
+                      max="10000"
+                      aria-label="units">
+                    </mat-slider>
+                  </div>
+                </div>
+                <div>
+                  <div>Discount</div>
+                  <div>
+                    <span class="list-section">
+                      <ul>
+                        <li *ngFor="let subtask of task.subtasks">
+                          <mat-checkbox [(ngModel)]="subtask.completed"
+                                        [color]="subtask.color"
+                                        (ngModelChange)="updateAllComplete()">
+                            {{subtask.name}}
+                          </mat-checkbox>
+                        </li>
+                      </ul>
+                    </span>
+                  </div>
+                </div>
+                <div>
+                  <div>Rating</div>
+                  <div>
+                    <span class="rating-list-section">
+                      <ul>
+                        <li *ngFor="let subtask of rating.subRating">
+                          <mat-checkbox [(ngModel)]="subtask.completed"
+                                        [color]="subtask.color"
+                                        (ngModelChange)="updateAllComplete()">
+                            {{subtask.name}}
+                            <span><i class="material-icons">star</i></span>
+                          </mat-checkbox>
+                        </li>
+                      </ul>
+                    </span>
+                  </div>
+                </div>
+                <div>
+                  <div>Sort by</div>
+                  <div>
+                    <mat-radio-group
+                      aria-labelledby="example-radio-group-label"
+                      class="example-radio-group"
+                      [(ngModel)]="favoriteSeason">
+                      <mat-radio-button class="example-radio-button" *ngFor="let sort of sortTypes" [value]="sortTypes.value">
+                        {{sort.name}}
+                      </mat-radio-button>
+                    </mat-radio-group>
+                  </div>
+                </div>
+              </div>
             </div>
         </div>
         <div class="col-9 right">
-            <div class="w-100">
-              <div class="row">
-                <div class="col-4" *ngFor="let item of products">
+            <div class="w-100 contents">
+              <div class="row mb-5">
+                <div class="col-md-4 col-sm-6 col-xs-12 " *ngFor="let item of productItems">
                   <mat-card class="item" (click)="openProduct(item)">
                     <div>
                       <img src="{{item.thumbnail}}" alt="">

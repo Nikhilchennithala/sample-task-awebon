@@ -7,7 +7,7 @@
     </div>
     <div id="center">
       <form action="">
-        <input type="search" placeholder="Search...">
+        <input type="search" placeholder="Search..." (keyup)="searching($event.target.value)">
         <button type="submit"><mat-icon>search</mat-icon></button>
       </form>
     </div>

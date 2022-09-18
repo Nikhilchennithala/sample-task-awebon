@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./landing-page.component.css']
 })
 export class LandingPageComponent implements OnInit {
+  value = "";
 
   constructor() { }
 
   ngOnInit() {
   }
-
+  send(value){
+    this.value = value;
+  }
 }
